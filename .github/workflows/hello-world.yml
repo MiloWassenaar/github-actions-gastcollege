@@ -18,4 +18,5 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
       # Mijn werk achtung
-      - run: ././vendor/bin/phpstan analyse
+      - run: composer install
+      - run: ./vendor/bin/phpstan analyse
