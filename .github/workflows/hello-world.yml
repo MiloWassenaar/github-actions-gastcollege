@@ -19,9 +19,9 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       # Mijn werk achtung
       - name: Setup PHP with PECL extension
-  uses: shivammathur/setup-php@v2
-  with:
-    php-version: '8.3'
-    extensions: imagick, swoole
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: imagick, swoole
       - run: composer install
       - run: ./vendor/bin/phpstan analyse
